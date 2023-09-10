@@ -1,8 +1,8 @@
--- MariaDB dump 10.19  Distrib 10.5.10-MariaDB, for debian-linux-gnu (x86_64)
+-- MariaDB dump 10.19  Distrib 10.5.9-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: database    Database: sei
 -- ------------------------------------------------------
--- Server version	10.5.10-MariaDB-1:10.5.10+maria~focal
+-- Server version	10.5.9-MariaDB-1:10.5.9+maria~focal
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -540,7 +540,6 @@ CREATE TABLE `assinatura` (
   `p7s_base64` longtext DEFAULT NULL,
   `id_tarja_assinatura` int(11) NOT NULL,
   `agrupador` varchar(36) DEFAULT NULL,
-  `modulo_origem` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_assinatura`),
   UNIQUE KEY `ak1_assinatura` (`id_documento`,`id_usuario`),
   KEY `fk_assinatura_tarja_assinatura` (`id_tarja_assinatura`),
@@ -2076,7 +2075,7 @@ CREATE TABLE `infra_navegador` (
 
 LOCK TABLES `infra_navegador` WRITE;
 /*!40000 ALTER TABLE `infra_navegador` DISABLE KEYS */;
-INSERT INTO `infra_navegador` VALUES (1,'Chrome','89.0','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','10.0.2.2','2021-05-18 00:24:23'),(2,'Firefox','106.0','Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0','172.20.0.1','2022-11-04 09:26:42'),(3,'Firefox','106.0','Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0','172.18.0.1','2022-11-07 08:14:25'),(4,'Firefox','106.0','Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0','172.18.0.1','2022-11-07 15:32:05'),(5,'Firefox','106.0','Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:106.0) Gecko/20100101 Firefox/106.0','172.19.0.1','2022-11-07 15:49:39');
+INSERT INTO `infra_navegador` VALUES (1,'Chrome','89.0','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36','10.0.2.2','2021-05-18 00:24:23');
 /*!40000 ALTER TABLE `infra_navegador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2100,7 +2099,7 @@ CREATE TABLE `infra_parametro` (
 
 LOCK TABLES `infra_parametro` WRITE;
 /*!40000 ALTER TABLE `infra_parametro` DISABLE KEYS */;
-INSERT INTO `infra_parametro` VALUES ('ABC_ID_TIPO_CONTATO_UNIDADES','5'),('ABC_ID_TIPO_CONTATO_USUARIOS','1'),('ID_MODELO_INTERNO_BASE_CONHECIMENTO','40'),('ID_SERIE_EMAIL','30'),('ID_SERIE_OUVIDORIA','86'),('ID_TIPO_CONTATO_ORGAOS','6'),('ID_TIPO_CONTATO_SISTEMAS','2'),('ID_TIPO_CONTATO_TEMPORARIO','4'),('ID_TIPO_CONTATO_USUARIOS_EXTERNOS','3'),('ID_UNIDADE_TESTE','110000001'),('ID_USUARIO_INTERNET','4'),('ID_USUARIO_INTRANET','3'),('ID_USUARIO_SEI','1'),('ID_USUARIO_SIP','2'),('SEI_ACESSO_FORMULARIO_OUVIDORIA','0'),('SEI_ALTERACAO_NIVEL_ACESSO_DOCUMENTO','1'),('SEI_EMAIL_ADMINISTRADOR','teste@dominio.gov.br'),('SEI_EMAIL_CONVERTER_ANEXO_HTML_PARA_PDF','0'),('SEI_EMAIL_SISTEMA','naoresponda@dominio.gov.br'),('SEI_EXIBIR_ARVORE_RESTRITO_SEM_ACESSO','1'),('SEI_FEDERACAO_NUMERO_PROCESSO','1'),('SEI_HABILITAR_ACESSO_EXTERNO_INCLUSAO_DOCUMENTO','0'),('SEI_HABILITAR_AUTENTICACAO_DOCUMENTO_EXTERNO','1'),('SEI_HABILITAR_GRAU_SIGILO','0'),('SEI_HABILITAR_HIPOTESE_LEGAL','2'),('SEI_HABILITAR_MOVER_DOCUMENTO','2'),('SEI_HABILITAR_NUMERO_PROCESSO_INFORMADO','1'),('SEI_HABILITAR_VALIDACAO_CPF_CERTIFICADO_DIGITAL','1'),('SEI_HABILITAR_VALIDACAO_EXTENSAO_ARQUIVOS','1'),('SEI_HABILITAR_VERIFICACAO_REPOSITORIO','0'),('SEI_ID_SISTEMA','100000100'),('SEI_ID_TIPO_PROCEDIMENTO_FEDERACAO','100000424'),('SEI_MASCARA_ASSUNTO',NULL),('SEI_MASCARA_NUMERO_PROCESSO_INFORMADO','#####.######/####-##'),('SEI_MAX_TAM_MENSAGEM_OUVIDORIA','4000'),('SEI_MSG_AVISO_CADASTRO_USUARIO_EXTERNO','ATENÇÃO! Cadastro destinado a pessoas físicas que estejam com demandas em PROCESSOS ADMINISTRATIVOS na instituição.'),('SEI_MSG_FORMULARIO_OUVIDORIA',''),('SEI_NUM_FATOR_DOWNLOAD_AUTOMATICO',''),('SEI_NUM_MAX_DOCS_PASTA','20'),('SEI_NUM_PAGINACAO_CONTROLE_PROCESSOS','100'),('SEI_SINALIZACAO_PROCESSO','1'),('SEI_SUFIXO_EMAIL','.gov.br'),('SEI_TAM_MB_CORRETOR_DESABILITADO','2'),('SEI_TAM_MB_DOC_EXTERNO','200'),('SEI_TIPO_ASSINATURA_INTERNA','1'),('SEI_TIPO_AUTENTICACAO_INTERNA','1'),('SEI_VERSAO','4.0.0.1'),('SEI_WS_NUM_MAX_DOCS','5');
+INSERT INTO `infra_parametro` VALUES ('ABC_ID_TIPO_CONTATO_UNIDADES','5'),('ABC_ID_TIPO_CONTATO_USUARIOS','1'),('ID_MODELO_INTERNO_BASE_CONHECIMENTO','40'),('ID_SERIE_EMAIL','30'),('ID_SERIE_OUVIDORIA','86'),('ID_TIPO_CONTATO_ORGAOS','6'),('ID_TIPO_CONTATO_SISTEMAS','2'),('ID_TIPO_CONTATO_TEMPORARIO','4'),('ID_TIPO_CONTATO_USUARIOS_EXTERNOS','3'),('ID_UNIDADE_TESTE','110000001'),('ID_USUARIO_INTERNET','4'),('ID_USUARIO_INTRANET','3'),('ID_USUARIO_SEI','1'),('ID_USUARIO_SIP','2'),('SEI_ACESSO_FORMULARIO_OUVIDORIA','0'),('SEI_ALTERACAO_NIVEL_ACESSO_DOCUMENTO','1'),('SEI_EMAIL_ADMINISTRADOR','teste@dominio.gov.br'),('SEI_EMAIL_CONVERTER_ANEXO_HTML_PARA_PDF','0'),('SEI_EMAIL_SISTEMA','naoresponda@dominio.gov.br'),('SEI_EXIBIR_ARVORE_RESTRITO_SEM_ACESSO','1'),('SEI_FEDERACAO_NUMERO_PROCESSO','1'),('SEI_HABILITAR_ACESSO_EXTERNO_INCLUSAO_DOCUMENTO','0'),('SEI_HABILITAR_AUTENTICACAO_DOCUMENTO_EXTERNO','1'),('SEI_HABILITAR_GRAU_SIGILO','0'),('SEI_HABILITAR_HIPOTESE_LEGAL','2'),('SEI_HABILITAR_MOVER_DOCUMENTO','2'),('SEI_HABILITAR_NUMERO_PROCESSO_INFORMADO','1'),('SEI_HABILITAR_VALIDACAO_CPF_CERTIFICADO_DIGITAL','1'),('SEI_HABILITAR_VALIDACAO_EXTENSAO_ARQUIVOS','1'),('SEI_HABILITAR_VERIFICACAO_REPOSITORIO','0'),('SEI_ID_SISTEMA','100000100'),('SEI_ID_TIPO_PROCEDIMENTO_FEDERACAO','100000424'),('SEI_MASCARA_ASSUNTO',NULL),('SEI_MASCARA_NUMERO_PROCESSO_INFORMADO','#####.######/####-##'),('SEI_MAX_TAM_MENSAGEM_OUVIDORIA','4000'),('SEI_MSG_AVISO_CADASTRO_USUARIO_EXTERNO','ATENÇÃO! Cadastro destinado a pessoas físicas que estejam com demandas em PROCESSOS ADMINISTRATIVOS na instituição.'),('SEI_MSG_FORMULARIO_OUVIDORIA',''),('SEI_NUM_FATOR_DOWNLOAD_AUTOMATICO',''),('SEI_NUM_MAX_DOCS_PASTA','20'),('SEI_NUM_PAGINACAO_CONTROLE_PROCESSOS','100'),('SEI_SINALIZACAO_PROCESSO','1'),('SEI_SUFIXO_EMAIL','.gov.br'),('SEI_TAM_MB_CORRETOR_DESABILITADO','2'),('SEI_TAM_MB_DOC_EXTERNO','200'),('SEI_TIPO_ASSINATURA_INTERNA','1'),('SEI_TIPO_AUTENTICACAO_INTERNA','1'),('SEI_VERSAO','4.0.0'),('SEI_WS_NUM_MAX_DOCS','5');
 /*!40000 ALTER TABLE `infra_parametro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4183,7 +4182,7 @@ CREATE TABLE `seq_acesso` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4192,6 +4191,7 @@ CREATE TABLE `seq_acesso` (
 
 LOCK TABLES `seq_acesso` WRITE;
 /*!40000 ALTER TABLE `seq_acesso` DISABLE KEYS */;
+INSERT INTO `seq_acesso` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_acesso` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4206,7 +4206,7 @@ CREATE TABLE `seq_acesso_externo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4215,6 +4215,7 @@ CREATE TABLE `seq_acesso_externo` (
 
 LOCK TABLES `seq_acesso_externo` WRITE;
 /*!40000 ALTER TABLE `seq_acesso_externo` DISABLE KEYS */;
+INSERT INTO `seq_acesso_externo` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_acesso_externo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4229,7 +4230,7 @@ CREATE TABLE `seq_acompanhamento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4238,6 +4239,7 @@ CREATE TABLE `seq_acompanhamento` (
 
 LOCK TABLES `seq_acompanhamento` WRITE;
 /*!40000 ALTER TABLE `seq_acompanhamento` DISABLE KEYS */;
+INSERT INTO `seq_acompanhamento` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_acompanhamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4276,7 +4278,7 @@ CREATE TABLE `seq_andamento_marcador` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4285,6 +4287,7 @@ CREATE TABLE `seq_andamento_marcador` (
 
 LOCK TABLES `seq_andamento_marcador` WRITE;
 /*!40000 ALTER TABLE `seq_andamento_marcador` DISABLE KEYS */;
+INSERT INTO `seq_andamento_marcador` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_andamento_marcador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4299,7 +4302,7 @@ CREATE TABLE `seq_andamento_situacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4308,6 +4311,7 @@ CREATE TABLE `seq_andamento_situacao` (
 
 LOCK TABLES `seq_andamento_situacao` WRITE;
 /*!40000 ALTER TABLE `seq_andamento_situacao` DISABLE KEYS */;
+INSERT INTO `seq_andamento_situacao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_andamento_situacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4322,7 +4326,7 @@ CREATE TABLE `seq_anexo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4331,6 +4335,7 @@ CREATE TABLE `seq_anexo` (
 
 LOCK TABLES `seq_anexo` WRITE;
 /*!40000 ALTER TABLE `seq_anexo` DISABLE KEYS */;
+INSERT INTO `seq_anexo` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_anexo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4345,7 +4350,7 @@ CREATE TABLE `seq_anotacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4354,6 +4359,7 @@ CREATE TABLE `seq_anotacao` (
 
 LOCK TABLES `seq_anotacao` WRITE;
 /*!40000 ALTER TABLE `seq_anotacao` DISABLE KEYS */;
+INSERT INTO `seq_anotacao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_anotacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4377,6 +4383,7 @@ CREATE TABLE `seq_arquivo_extensao` (
 
 LOCK TABLES `seq_arquivo_extensao` WRITE;
 /*!40000 ALTER TABLE `seq_arquivo_extensao` DISABLE KEYS */;
+INSERT INTO `seq_arquivo_extensao` VALUES (41,'0');
 /*!40000 ALTER TABLE `seq_arquivo_extensao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4400,6 +4407,7 @@ CREATE TABLE `seq_assinante` (
 
 LOCK TABLES `seq_assinante` WRITE;
 /*!40000 ALTER TABLE `seq_assinante` DISABLE KEYS */;
+INSERT INTO `seq_assinante` VALUES (21,'0');
 /*!40000 ALTER TABLE `seq_assinante` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4414,7 +4422,7 @@ CREATE TABLE `seq_assinatura` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4423,6 +4431,7 @@ CREATE TABLE `seq_assinatura` (
 
 LOCK TABLES `seq_assinatura` WRITE;
 /*!40000 ALTER TABLE `seq_assinatura` DISABLE KEYS */;
+INSERT INTO `seq_assinatura` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_assinatura` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4446,6 +4455,7 @@ CREATE TABLE `seq_assunto` (
 
 LOCK TABLES `seq_assunto` WRITE;
 /*!40000 ALTER TABLE `seq_assunto` DISABLE KEYS */;
+INSERT INTO `seq_assunto` VALUES (668,'0');
 /*!40000 ALTER TABLE `seq_assunto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4469,6 +4479,7 @@ CREATE TABLE `seq_assunto_proxy` (
 
 LOCK TABLES `seq_assunto_proxy` WRITE;
 /*!40000 ALTER TABLE `seq_assunto_proxy` DISABLE KEYS */;
+INSERT INTO `seq_assunto_proxy` VALUES (668,'0');
 /*!40000 ALTER TABLE `seq_assunto_proxy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4483,7 +4494,7 @@ CREATE TABLE `seq_atividade` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4492,6 +4503,7 @@ CREATE TABLE `seq_atividade` (
 
 LOCK TABLES `seq_atividade` WRITE;
 /*!40000 ALTER TABLE `seq_atividade` DISABLE KEYS */;
+INSERT INTO `seq_atividade` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_atividade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4506,7 +4518,7 @@ CREATE TABLE `seq_atributo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4515,6 +4527,7 @@ CREATE TABLE `seq_atributo` (
 
 LOCK TABLES `seq_atributo` WRITE;
 /*!40000 ALTER TABLE `seq_atributo` DISABLE KEYS */;
+INSERT INTO `seq_atributo` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_atributo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4529,7 +4542,7 @@ CREATE TABLE `seq_atributo_andamento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4538,6 +4551,7 @@ CREATE TABLE `seq_atributo_andamento` (
 
 LOCK TABLES `seq_atributo_andamento` WRITE;
 /*!40000 ALTER TABLE `seq_atributo_andamento` DISABLE KEYS */;
+INSERT INTO `seq_atributo_andamento` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_atributo_andamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4600,7 +4614,7 @@ CREATE TABLE `seq_auditoria_protocolo` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4609,6 +4623,7 @@ CREATE TABLE `seq_auditoria_protocolo` (
 
 LOCK TABLES `seq_auditoria_protocolo` WRITE;
 /*!40000 ALTER TABLE `seq_auditoria_protocolo` DISABLE KEYS */;
+INSERT INTO `seq_auditoria_protocolo` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_auditoria_protocolo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4623,7 +4638,7 @@ CREATE TABLE `seq_base_conhecimento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4632,6 +4647,7 @@ CREATE TABLE `seq_base_conhecimento` (
 
 LOCK TABLES `seq_base_conhecimento` WRITE;
 /*!40000 ALTER TABLE `seq_base_conhecimento` DISABLE KEYS */;
+INSERT INTO `seq_base_conhecimento` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_base_conhecimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4646,7 +4662,7 @@ CREATE TABLE `seq_bloco` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4655,6 +4671,7 @@ CREATE TABLE `seq_bloco` (
 
 LOCK TABLES `seq_bloco` WRITE;
 /*!40000 ALTER TABLE `seq_bloco` DISABLE KEYS */;
+INSERT INTO `seq_bloco` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_bloco` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4702,6 +4719,7 @@ CREATE TABLE `seq_cargo` (
 
 LOCK TABLES `seq_cargo` WRITE;
 /*!40000 ALTER TABLE `seq_cargo` DISABLE KEYS */;
+INSERT INTO `seq_cargo` VALUES (81,'0');
 /*!40000 ALTER TABLE `seq_cargo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4749,6 +4767,7 @@ CREATE TABLE `seq_cidade` (
 
 LOCK TABLES `seq_cidade` WRITE;
 /*!40000 ALTER TABLE `seq_cidade` DISABLE KEYS */;
+INSERT INTO `seq_cidade` VALUES (5564,'0');
 /*!40000 ALTER TABLE `seq_cidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4796,6 +4815,7 @@ CREATE TABLE `seq_conjunto_estilos` (
 
 LOCK TABLES `seq_conjunto_estilos` WRITE;
 /*!40000 ALTER TABLE `seq_conjunto_estilos` DISABLE KEYS */;
+INSERT INTO `seq_conjunto_estilos` VALUES (81,'0');
 /*!40000 ALTER TABLE `seq_conjunto_estilos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4819,6 +4839,7 @@ CREATE TABLE `seq_conjunto_estilos_item` (
 
 LOCK TABLES `seq_conjunto_estilos_item` WRITE;
 /*!40000 ALTER TABLE `seq_conjunto_estilos_item` DISABLE KEYS */;
+INSERT INTO `seq_conjunto_estilos_item` VALUES (1642,'0');
 /*!40000 ALTER TABLE `seq_conjunto_estilos_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4842,6 +4863,7 @@ CREATE TABLE `seq_contato` (
 
 LOCK TABLES `seq_contato` WRITE;
 /*!40000 ALTER TABLE `seq_contato` DISABLE KEYS */;
+INSERT INTO `seq_contato` VALUES (100000010,'0');
 /*!40000 ALTER TABLE `seq_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4856,7 +4878,7 @@ CREATE TABLE `seq_controle_interno` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4865,6 +4887,7 @@ CREATE TABLE `seq_controle_interno` (
 
 LOCK TABLES `seq_controle_interno` WRITE;
 /*!40000 ALTER TABLE `seq_controle_interno` DISABLE KEYS */;
+INSERT INTO `seq_controle_interno` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_controle_interno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4903,7 +4926,7 @@ CREATE TABLE `seq_controle_unidade` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4912,6 +4935,7 @@ CREATE TABLE `seq_controle_unidade` (
 
 LOCK TABLES `seq_controle_unidade` WRITE;
 /*!40000 ALTER TABLE `seq_controle_unidade` DISABLE KEYS */;
+INSERT INTO `seq_controle_unidade` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_controle_unidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4950,7 +4974,7 @@ CREATE TABLE `seq_dominio` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4959,6 +4983,7 @@ CREATE TABLE `seq_dominio` (
 
 LOCK TABLES `seq_dominio` WRITE;
 /*!40000 ALTER TABLE `seq_dominio` DISABLE KEYS */;
+INSERT INTO `seq_dominio` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_dominio` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4973,7 +4998,7 @@ CREATE TABLE `seq_email_grupo_email` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4982,6 +5007,7 @@ CREATE TABLE `seq_email_grupo_email` (
 
 LOCK TABLES `seq_email_grupo_email` WRITE;
 /*!40000 ALTER TABLE `seq_email_grupo_email` DISABLE KEYS */;
+INSERT INTO `seq_email_grupo_email` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_email_grupo_email` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4996,7 +5022,7 @@ CREATE TABLE `seq_email_sistema` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5005,6 +5031,7 @@ CREATE TABLE `seq_email_sistema` (
 
 LOCK TABLES `seq_email_sistema` WRITE;
 /*!40000 ALTER TABLE `seq_email_sistema` DISABLE KEYS */;
+INSERT INTO `seq_email_sistema` VALUES (10,'0');
 /*!40000 ALTER TABLE `seq_email_sistema` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5028,6 +5055,7 @@ CREATE TABLE `seq_email_unidade` (
 
 LOCK TABLES `seq_email_unidade` WRITE;
 /*!40000 ALTER TABLE `seq_email_unidade` DISABLE KEYS */;
+INSERT INTO `seq_email_unidade` VALUES (728,'0');
 /*!40000 ALTER TABLE `seq_email_unidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5042,7 +5070,7 @@ CREATE TABLE `seq_email_utilizado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5051,6 +5079,7 @@ CREATE TABLE `seq_email_utilizado` (
 
 LOCK TABLES `seq_email_utilizado` WRITE;
 /*!40000 ALTER TABLE `seq_email_utilizado` DISABLE KEYS */;
+INSERT INTO `seq_email_utilizado` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_email_utilizado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5065,7 +5094,7 @@ CREATE TABLE `seq_estatisticas` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5074,6 +5103,7 @@ CREATE TABLE `seq_estatisticas` (
 
 LOCK TABLES `seq_estatisticas` WRITE;
 /*!40000 ALTER TABLE `seq_estatisticas` DISABLE KEYS */;
+INSERT INTO `seq_estatisticas` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_estatisticas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5097,6 +5127,7 @@ CREATE TABLE `seq_estilo` (
 
 LOCK TABLES `seq_estilo` WRITE;
 /*!40000 ALTER TABLE `seq_estilo` DISABLE KEYS */;
+INSERT INTO `seq_estilo` VALUES (59,'0');
 /*!40000 ALTER TABLE `seq_estilo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5111,7 +5142,7 @@ CREATE TABLE `seq_feed` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5120,6 +5151,7 @@ CREATE TABLE `seq_feed` (
 
 LOCK TABLES `seq_feed` WRITE;
 /*!40000 ALTER TABLE `seq_feed` DISABLE KEYS */;
+INSERT INTO `seq_feed` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_feed` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5143,6 +5175,7 @@ CREATE TABLE `seq_feriado` (
 
 LOCK TABLES `seq_feriado` WRITE;
 /*!40000 ALTER TABLE `seq_feriado` DISABLE KEYS */;
+INSERT INTO `seq_feriado` VALUES (12,'0');
 /*!40000 ALTER TABLE `seq_feriado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5157,7 +5190,7 @@ CREATE TABLE `seq_grupo_acompanhamento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5166,6 +5199,7 @@ CREATE TABLE `seq_grupo_acompanhamento` (
 
 LOCK TABLES `seq_grupo_acompanhamento` WRITE;
 /*!40000 ALTER TABLE `seq_grupo_acompanhamento` DISABLE KEYS */;
+INSERT INTO `seq_grupo_acompanhamento` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_grupo_acompanhamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5204,7 +5238,7 @@ CREATE TABLE `seq_grupo_contato` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5213,6 +5247,7 @@ CREATE TABLE `seq_grupo_contato` (
 
 LOCK TABLES `seq_grupo_contato` WRITE;
 /*!40000 ALTER TABLE `seq_grupo_contato` DISABLE KEYS */;
+INSERT INTO `seq_grupo_contato` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_grupo_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5227,7 +5262,7 @@ CREATE TABLE `seq_grupo_email` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5236,6 +5271,7 @@ CREATE TABLE `seq_grupo_email` (
 
 LOCK TABLES `seq_grupo_email` WRITE;
 /*!40000 ALTER TABLE `seq_grupo_email` DISABLE KEYS */;
+INSERT INTO `seq_grupo_email` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_grupo_email` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5274,7 +5310,7 @@ CREATE TABLE `seq_grupo_protocolo_modelo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5283,6 +5319,7 @@ CREATE TABLE `seq_grupo_protocolo_modelo` (
 
 LOCK TABLES `seq_grupo_protocolo_modelo` WRITE;
 /*!40000 ALTER TABLE `seq_grupo_protocolo_modelo` DISABLE KEYS */;
+INSERT INTO `seq_grupo_protocolo_modelo` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_grupo_protocolo_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5306,6 +5343,7 @@ CREATE TABLE `seq_grupo_serie` (
 
 LOCK TABLES `seq_grupo_serie` WRITE;
 /*!40000 ALTER TABLE `seq_grupo_serie` DISABLE KEYS */;
+INSERT INTO `seq_grupo_serie` VALUES (2,'0');
 /*!40000 ALTER TABLE `seq_grupo_serie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5320,7 +5358,7 @@ CREATE TABLE `seq_grupo_unidade` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5329,6 +5367,7 @@ CREATE TABLE `seq_grupo_unidade` (
 
 LOCK TABLES `seq_grupo_unidade` WRITE;
 /*!40000 ALTER TABLE `seq_grupo_unidade` DISABLE KEYS */;
+INSERT INTO `seq_grupo_unidade` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_grupo_unidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5352,6 +5391,7 @@ CREATE TABLE `seq_hipotese_legal` (
 
 LOCK TABLES `seq_hipotese_legal` WRITE;
 /*!40000 ALTER TABLE `seq_hipotese_legal` DISABLE KEYS */;
+INSERT INTO `seq_hipotese_legal` VALUES (23,'0');
 /*!40000 ALTER TABLE `seq_hipotese_legal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5375,6 +5415,7 @@ CREATE TABLE `seq_imagem_formato` (
 
 LOCK TABLES `seq_imagem_formato` WRITE;
 /*!40000 ALTER TABLE `seq_imagem_formato` DISABLE KEYS */;
+INSERT INTO `seq_imagem_formato` VALUES (3,'0');
 /*!40000 ALTER TABLE `seq_imagem_formato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5389,7 +5430,7 @@ CREATE TABLE `seq_infra_auditoria` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5398,6 +5439,7 @@ CREATE TABLE `seq_infra_auditoria` (
 
 LOCK TABLES `seq_infra_auditoria` WRITE;
 /*!40000 ALTER TABLE `seq_infra_auditoria` DISABLE KEYS */;
+INSERT INTO `seq_infra_auditoria` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_infra_auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5421,6 +5463,7 @@ CREATE TABLE `seq_infra_log` (
 
 LOCK TABLES `seq_infra_log` WRITE;
 /*!40000 ALTER TABLE `seq_infra_log` DISABLE KEYS */;
+INSERT INTO `seq_infra_log` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_infra_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5435,7 +5478,7 @@ CREATE TABLE `seq_infra_navegador` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5444,6 +5487,7 @@ CREATE TABLE `seq_infra_navegador` (
 
 LOCK TABLES `seq_infra_navegador` WRITE;
 /*!40000 ALTER TABLE `seq_infra_navegador` DISABLE KEYS */;
+INSERT INTO `seq_infra_navegador` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_infra_navegador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5482,7 +5526,7 @@ CREATE TABLE `seq_localizador` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5491,6 +5535,7 @@ CREATE TABLE `seq_localizador` (
 
 LOCK TABLES `seq_localizador` WRITE;
 /*!40000 ALTER TABLE `seq_localizador` DISABLE KEYS */;
+INSERT INTO `seq_localizador` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_localizador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5505,7 +5550,7 @@ CREATE TABLE `seq_lugar_localizador` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5514,6 +5559,7 @@ CREATE TABLE `seq_lugar_localizador` (
 
 LOCK TABLES `seq_lugar_localizador` WRITE;
 /*!40000 ALTER TABLE `seq_lugar_localizador` DISABLE KEYS */;
+INSERT INTO `seq_lugar_localizador` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_lugar_localizador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5528,7 +5574,7 @@ CREATE TABLE `seq_marcador` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5537,6 +5583,7 @@ CREATE TABLE `seq_marcador` (
 
 LOCK TABLES `seq_marcador` WRITE;
 /*!40000 ALTER TABLE `seq_marcador` DISABLE KEYS */;
+INSERT INTO `seq_marcador` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_marcador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5560,6 +5607,7 @@ CREATE TABLE `seq_modelo` (
 
 LOCK TABLES `seq_modelo` WRITE;
 /*!40000 ALTER TABLE `seq_modelo` DISABLE KEYS */;
+INSERT INTO `seq_modelo` VALUES (118,'0');
 /*!40000 ALTER TABLE `seq_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5574,7 +5622,7 @@ CREATE TABLE `seq_monitoramento_servico` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5583,6 +5631,7 @@ CREATE TABLE `seq_monitoramento_servico` (
 
 LOCK TABLES `seq_monitoramento_servico` WRITE;
 /*!40000 ALTER TABLE `seq_monitoramento_servico` DISABLE KEYS */;
+INSERT INTO `seq_monitoramento_servico` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_monitoramento_servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5606,6 +5655,7 @@ CREATE TABLE `seq_nivel_acesso_permitido` (
 
 LOCK TABLES `seq_nivel_acesso_permitido` WRITE;
 /*!40000 ALTER TABLE `seq_nivel_acesso_permitido` DISABLE KEYS */;
+INSERT INTO `seq_nivel_acesso_permitido` VALUES (3029,'0');
 /*!40000 ALTER TABLE `seq_nivel_acesso_permitido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5620,7 +5670,7 @@ CREATE TABLE `seq_novidade` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5629,6 +5679,7 @@ CREATE TABLE `seq_novidade` (
 
 LOCK TABLES `seq_novidade` WRITE;
 /*!40000 ALTER TABLE `seq_novidade` DISABLE KEYS */;
+INSERT INTO `seq_novidade` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_novidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5643,7 +5694,7 @@ CREATE TABLE `seq_numeracao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5652,6 +5703,7 @@ CREATE TABLE `seq_numeracao` (
 
 LOCK TABLES `seq_numeracao` WRITE;
 /*!40000 ALTER TABLE `seq_numeracao` DISABLE KEYS */;
+INSERT INTO `seq_numeracao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_numeracao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5666,7 +5718,7 @@ CREATE TABLE `seq_observacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5675,6 +5727,7 @@ CREATE TABLE `seq_observacao` (
 
 LOCK TABLES `seq_observacao` WRITE;
 /*!40000 ALTER TABLE `seq_observacao` DISABLE KEYS */;
+INSERT INTO `seq_observacao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_observacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5689,7 +5742,7 @@ CREATE TABLE `seq_operacao_servico` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5698,6 +5751,7 @@ CREATE TABLE `seq_operacao_servico` (
 
 LOCK TABLES `seq_operacao_servico` WRITE;
 /*!40000 ALTER TABLE `seq_operacao_servico` DISABLE KEYS */;
+INSERT INTO `seq_operacao_servico` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_operacao_servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5712,7 +5766,7 @@ CREATE TABLE `seq_ordenador_despesa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5721,6 +5775,7 @@ CREATE TABLE `seq_ordenador_despesa` (
 
 LOCK TABLES `seq_ordenador_despesa` WRITE;
 /*!40000 ALTER TABLE `seq_ordenador_despesa` DISABLE KEYS */;
+INSERT INTO `seq_ordenador_despesa` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_ordenador_despesa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5768,6 +5823,7 @@ CREATE TABLE `seq_pais` (
 
 LOCK TABLES `seq_pais` WRITE;
 /*!40000 ALTER TABLE `seq_pais` DISABLE KEYS */;
+INSERT INTO `seq_pais` VALUES (894,'0');
 /*!40000 ALTER TABLE `seq_pais` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5782,7 +5838,7 @@ CREATE TABLE `seq_participante` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5791,6 +5847,7 @@ CREATE TABLE `seq_participante` (
 
 LOCK TABLES `seq_participante` WRITE;
 /*!40000 ALTER TABLE `seq_participante` DISABLE KEYS */;
+INSERT INTO `seq_participante` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_participante` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5829,7 +5886,7 @@ CREATE TABLE `seq_protocolo` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5838,6 +5895,7 @@ CREATE TABLE `seq_protocolo` (
 
 LOCK TABLES `seq_protocolo` WRITE;
 /*!40000 ALTER TABLE `seq_protocolo` DISABLE KEYS */;
+INSERT INTO `seq_protocolo` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_protocolo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5852,7 +5910,7 @@ CREATE TABLE `seq_protocolo_modelo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5861,6 +5919,7 @@ CREATE TABLE `seq_protocolo_modelo` (
 
 LOCK TABLES `seq_protocolo_modelo` WRITE;
 /*!40000 ALTER TABLE `seq_protocolo_modelo` DISABLE KEYS */;
+INSERT INTO `seq_protocolo_modelo` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_protocolo_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5875,7 +5934,7 @@ CREATE TABLE `seq_publicacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5884,6 +5943,7 @@ CREATE TABLE `seq_publicacao` (
 
 LOCK TABLES `seq_publicacao` WRITE;
 /*!40000 ALTER TABLE `seq_publicacao` DISABLE KEYS */;
+INSERT INTO `seq_publicacao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_publicacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5898,7 +5958,7 @@ CREATE TABLE `seq_rel_protocolo_protocolo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5907,6 +5967,7 @@ CREATE TABLE `seq_rel_protocolo_protocolo` (
 
 LOCK TABLES `seq_rel_protocolo_protocolo` WRITE;
 /*!40000 ALTER TABLE `seq_rel_protocolo_protocolo` DISABLE KEYS */;
+INSERT INTO `seq_rel_protocolo_protocolo` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_rel_protocolo_protocolo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5930,6 +5991,7 @@ CREATE TABLE `seq_rel_unidade_tipo_contato` (
 
 LOCK TABLES `seq_rel_unidade_tipo_contato` WRITE;
 /*!40000 ALTER TABLE `seq_rel_unidade_tipo_contato` DISABLE KEYS */;
+INSERT INTO `seq_rel_unidade_tipo_contato` VALUES (7,'0');
 /*!40000 ALTER TABLE `seq_rel_unidade_tipo_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5944,7 +6006,7 @@ CREATE TABLE `seq_retorno_programado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5953,6 +6015,7 @@ CREATE TABLE `seq_retorno_programado` (
 
 LOCK TABLES `seq_retorno_programado` WRITE;
 /*!40000 ALTER TABLE `seq_retorno_programado` DISABLE KEYS */;
+INSERT INTO `seq_retorno_programado` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_retorno_programado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5967,7 +6030,7 @@ CREATE TABLE `seq_secao_documento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5976,6 +6039,7 @@ CREATE TABLE `seq_secao_documento` (
 
 LOCK TABLES `seq_secao_documento` WRITE;
 /*!40000 ALTER TABLE `seq_secao_documento` DISABLE KEYS */;
+INSERT INTO `seq_secao_documento` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_secao_documento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5999,6 +6063,7 @@ CREATE TABLE `seq_secao_imprensa_nacional` (
 
 LOCK TABLES `seq_secao_imprensa_nacional` WRITE;
 /*!40000 ALTER TABLE `seq_secao_imprensa_nacional` DISABLE KEYS */;
+INSERT INTO `seq_secao_imprensa_nacional` VALUES (3,'0');
 /*!40000 ALTER TABLE `seq_secao_imprensa_nacional` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6022,6 +6087,7 @@ CREATE TABLE `seq_secao_modelo` (
 
 LOCK TABLES `seq_secao_modelo` WRITE;
 /*!40000 ALTER TABLE `seq_secao_modelo` DISABLE KEYS */;
+INSERT INTO `seq_secao_modelo` VALUES (775,'0');
 /*!40000 ALTER TABLE `seq_secao_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6045,6 +6111,7 @@ CREATE TABLE `seq_serie` (
 
 LOCK TABLES `seq_serie` WRITE;
 /*!40000 ALTER TABLE `seq_serie` DISABLE KEYS */;
+INSERT INTO `seq_serie` VALUES (282,'0');
 /*!40000 ALTER TABLE `seq_serie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6059,7 +6126,7 @@ CREATE TABLE `seq_serie_publicacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6068,6 +6135,7 @@ CREATE TABLE `seq_serie_publicacao` (
 
 LOCK TABLES `seq_serie_publicacao` WRITE;
 /*!40000 ALTER TABLE `seq_serie_publicacao` DISABLE KEYS */;
+INSERT INTO `seq_serie_publicacao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_serie_publicacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6082,7 +6150,7 @@ CREATE TABLE `seq_serie_restricao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6091,6 +6159,7 @@ CREATE TABLE `seq_serie_restricao` (
 
 LOCK TABLES `seq_serie_restricao` WRITE;
 /*!40000 ALTER TABLE `seq_serie_restricao` DISABLE KEYS */;
+INSERT INTO `seq_serie_restricao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_serie_restricao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6105,7 +6174,7 @@ CREATE TABLE `seq_servico` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6114,6 +6183,7 @@ CREATE TABLE `seq_servico` (
 
 LOCK TABLES `seq_servico` WRITE;
 /*!40000 ALTER TABLE `seq_servico` DISABLE KEYS */;
+INSERT INTO `seq_servico` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_servico` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6128,7 +6198,7 @@ CREATE TABLE `seq_situacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6137,6 +6207,7 @@ CREATE TABLE `seq_situacao` (
 
 LOCK TABLES `seq_situacao` WRITE;
 /*!40000 ALTER TABLE `seq_situacao` DISABLE KEYS */;
+INSERT INTO `seq_situacao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_situacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6160,6 +6231,7 @@ CREATE TABLE `seq_tabela_assuntos` (
 
 LOCK TABLES `seq_tabela_assuntos` WRITE;
 /*!40000 ALTER TABLE `seq_tabela_assuntos` DISABLE KEYS */;
+INSERT INTO `seq_tabela_assuntos` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_tabela_assuntos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6174,7 +6246,7 @@ CREATE TABLE `seq_tarefa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=137 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6183,6 +6255,7 @@ CREATE TABLE `seq_tarefa` (
 
 LOCK TABLES `seq_tarefa` WRITE;
 /*!40000 ALTER TABLE `seq_tarefa` DISABLE KEYS */;
+INSERT INTO `seq_tarefa` VALUES (136,'0');
 /*!40000 ALTER TABLE `seq_tarefa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6206,6 +6279,7 @@ CREATE TABLE `seq_tarja_assinatura` (
 
 LOCK TABLES `seq_tarja_assinatura` WRITE;
 /*!40000 ALTER TABLE `seq_tarja_assinatura` DISABLE KEYS */;
+INSERT INTO `seq_tarja_assinatura` VALUES (5,'0');
 /*!40000 ALTER TABLE `seq_tarja_assinatura` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6220,7 +6294,7 @@ CREATE TABLE `seq_texto_padrao_interno` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6229,6 +6303,7 @@ CREATE TABLE `seq_texto_padrao_interno` (
 
 LOCK TABLES `seq_texto_padrao_interno` WRITE;
 /*!40000 ALTER TABLE `seq_texto_padrao_interno` DISABLE KEYS */;
+INSERT INTO `seq_texto_padrao_interno` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_texto_padrao_interno` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6252,6 +6327,7 @@ CREATE TABLE `seq_tipo_conferencia` (
 
 LOCK TABLES `seq_tipo_conferencia` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_conferencia` DISABLE KEYS */;
+INSERT INTO `seq_tipo_conferencia` VALUES (4,'0');
 /*!40000 ALTER TABLE `seq_tipo_conferencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6275,6 +6351,7 @@ CREATE TABLE `seq_tipo_contato` (
 
 LOCK TABLES `seq_tipo_contato` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_contato` DISABLE KEYS */;
+INSERT INTO `seq_tipo_contato` VALUES (6,'0');
 /*!40000 ALTER TABLE `seq_tipo_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6289,7 +6366,7 @@ CREATE TABLE `seq_tipo_formulario` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6298,6 +6375,7 @@ CREATE TABLE `seq_tipo_formulario` (
 
 LOCK TABLES `seq_tipo_formulario` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_formulario` DISABLE KEYS */;
+INSERT INTO `seq_tipo_formulario` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_tipo_formulario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6312,7 +6390,7 @@ CREATE TABLE `seq_tipo_localizador` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6321,6 +6399,7 @@ CREATE TABLE `seq_tipo_localizador` (
 
 LOCK TABLES `seq_tipo_localizador` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_localizador` DISABLE KEYS */;
+INSERT INTO `seq_tipo_localizador` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_tipo_localizador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6335,7 +6414,7 @@ CREATE TABLE `seq_tipo_proced_restricao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6344,6 +6423,7 @@ CREATE TABLE `seq_tipo_proced_restricao` (
 
 LOCK TABLES `seq_tipo_proced_restricao` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_proced_restricao` DISABLE KEYS */;
+INSERT INTO `seq_tipo_proced_restricao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_tipo_proced_restricao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6367,6 +6447,7 @@ CREATE TABLE `seq_tipo_procedimento` (
 
 LOCK TABLES `seq_tipo_procedimento` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_procedimento` DISABLE KEYS */;
+INSERT INTO `seq_tipo_procedimento` VALUES (100000424,'0');
 /*!40000 ALTER TABLE `seq_tipo_procedimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6390,6 +6471,7 @@ CREATE TABLE `seq_tipo_suporte` (
 
 LOCK TABLES `seq_tipo_suporte` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_suporte` DISABLE KEYS */;
+INSERT INTO `seq_tipo_suporte` VALUES (8,'0');
 /*!40000 ALTER TABLE `seq_tipo_suporte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6437,6 +6519,7 @@ CREATE TABLE `seq_tratamento` (
 
 LOCK TABLES `seq_tratamento` WRITE;
 /*!40000 ALTER TABLE `seq_tratamento` DISABLE KEYS */;
+INSERT INTO `seq_tratamento` VALUES (4,'0');
 /*!40000 ALTER TABLE `seq_tratamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6460,6 +6543,7 @@ CREATE TABLE `seq_uf` (
 
 LOCK TABLES `seq_uf` WRITE;
 /*!40000 ALTER TABLE `seq_uf` DISABLE KEYS */;
+INSERT INTO `seq_uf` VALUES (27,'0');
 /*!40000 ALTER TABLE `seq_uf` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6498,7 +6582,7 @@ CREATE TABLE `seq_unidade_publicacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6507,6 +6591,7 @@ CREATE TABLE `seq_unidade_publicacao` (
 
 LOCK TABLES `seq_unidade_publicacao` WRITE;
 /*!40000 ALTER TABLE `seq_unidade_publicacao` DISABLE KEYS */;
+INSERT INTO `seq_unidade_publicacao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_unidade_publicacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6554,6 +6639,7 @@ CREATE TABLE `seq_veiculo_imprensa_nacional` (
 
 LOCK TABLES `seq_veiculo_imprensa_nacional` WRITE;
 /*!40000 ALTER TABLE `seq_veiculo_imprensa_nacional` DISABLE KEYS */;
+INSERT INTO `seq_veiculo_imprensa_nacional` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_veiculo_imprensa_nacional` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6577,6 +6663,7 @@ CREATE TABLE `seq_veiculo_publicacao` (
 
 LOCK TABLES `seq_veiculo_publicacao` WRITE;
 /*!40000 ALTER TABLE `seq_veiculo_publicacao` DISABLE KEYS */;
+INSERT INTO `seq_veiculo_publicacao` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_veiculo_publicacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6591,7 +6678,7 @@ CREATE TABLE `seq_versao_secao_documento` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6600,6 +6687,7 @@ CREATE TABLE `seq_versao_secao_documento` (
 
 LOCK TABLES `seq_versao_secao_documento` WRITE;
 /*!40000 ALTER TABLE `seq_versao_secao_documento` DISABLE KEYS */;
+INSERT INTO `seq_versao_secao_documento` VALUES (1,'0');
 /*!40000 ALTER TABLE `seq_versao_secao_documento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6623,6 +6711,7 @@ CREATE TABLE `seq_vocativo` (
 
 LOCK TABLES `seq_vocativo` WRITE;
 /*!40000 ALTER TABLE `seq_vocativo` DISABLE KEYS */;
+INSERT INTO `seq_vocativo` VALUES (63,'0');
 /*!40000 ALTER TABLE `seq_vocativo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6954,7 +7043,7 @@ CREATE TABLE `tarja_assinatura` (
 
 LOCK TABLES `tarja_assinatura` WRITE;
 /*!40000 ALTER TABLE `tarja_assinatura` DISABLE KEYS */;
-INSERT INTO `tarja_assinatura` VALUES (1,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 6º, caput, do <a title=\"Acesse o Decreto\" href=\"http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm\" target=\"_blank\">Decreto nº 8.539, de 8 de outubro de 2015</a>.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p>      </td>    </tr>  </table>','iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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','S','C'),(2,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title=\"Acesse o Decreto\" href=\"http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm\" target=\"_blank\">Decreto nº 8.539, de 8 de outubro de 2015</a>.</p>      </td>    </tr>  </table>','iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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','S','S'),(3,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>       @qr_code@      </td>      <td>       <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">A autenticidade deste documento pode ser conferida no site <a title=\"Página de Autenticidade de Documentos\" href=\"http://[servidor_php]/sei/controlador_externo.php?acao=documento_conferir&id_orgao_acesso_externo=0\" target=\"_blank\">http://[servidor_php]/sei/controlador_externo.php?acao=documento_conferir&id_orgao_acesso_externo=0</a>, informando o código verificador <b>@codigo_verificador@</b> e o código CRC <b>@crc_assinatura@</b>.</p>      </td>    </tr>  </table>  <hr style=\"margin:1px;\" />  <br />',NULL,'S','V'),(4,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 3º, caput, da <a title=\"Acesse a Lei\" href=\"https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12682.htm\" target=\"_blank\">Lei nº 12.682, de 9 de julho de 2012</a>, a partir de @tipo_conferencia@.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p></td></tr></table>','iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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','S','A'),(5,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title=\"Acesse o Decreto\" href=\"http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm\" target=\"_blank\">Decreto nº 8.539, de 8 de outubro de 2015</a>, a partir de @tipo_conferencia@.</p></td></tr></table>','iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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','S','H');
+INSERT INTO `tarja_assinatura` VALUES (1,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 6º, caput, do <a title=\"Acesse o Decreto\" href=\"http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm\" target=\"_blank\">Decreto nº 8.539, de 8 de outubro de 2015</a>.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p>      </td>    </tr>  </table>','iVBORw0KGgoAAAANSUhEUgAAAFkAAAA8CAMAAAA67OZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADTtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDQuMi4yLWMwNjMgNTMuMzUyNjI0LCAyMDA4LzA3LzMwLTE4OjEyOjE4ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIKICAgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iIgogICBwaG90b3Nob3A6QXV0aG9yc1Bvc2l0aW9uPSIiPgogICA8ZGM6cmlnaHRzPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6cmlnaHRzPgogICA8ZGM6Y3JlYXRvcj4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGk+QWxiZXJ0byBCaWdhdHRpPC9yZGY6bGk+CiAgICA8L3JkZjpTZXE+CiAgIDwvZGM6Y3JlYXRvcj4KICAgPGRjOnRpdGxlPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6dGl0bGU+CiAgIDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPgogICAgPC9yZGY6QWx0PgogICA8L3htcFJpZ2h0czpVc2FnZVRlcm1zPgogICA8SXB0YzR4bXBDb3JlOkNyZWF0b3JDb250YWN0SW5mbwogICAgSXB0YzR4bXBDb3JlOkNpQWRyRXh0YWRyPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDaXR5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJSZWdpb249IiIKICAgIElwdGM0eG1wQ29yZTpDaUFkclBjb2RlPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDdHJ5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lUZWxXb3JrPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lFbWFpbFdvcms9IiIKICAgIElwdGM0eG1wQ29yZTpDaVVybFdvcms9IiIvPgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+RO84nQAAAwBQTFRFamts+fn5mp6hc3Nz9fX1U1NTS0tKnaGk6unqzM3P7e3u8fHxuLm7/Pz8lZmc2dnZxcXGWlpavr29wsLCp6eniYmKhYaGZWZmkpaZ0dHS5eXlkZGSrq2utbW2XV1d4uHhfX1+sbGy1dXW3d3dqampgYGCjY2OyMnKYWJi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','S','C'),(2,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title=\"Acesse o Decreto\" href=\"http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm\" target=\"_blank\">Decreto nº 8.539, de 8 de outubro de 2015</a>.</p>      </td>    </tr>  </table>','iVBORw0KGgoAAAANSUhEUgAAAFkAAAA8CAMAAAA67OZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADTtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDQuMi4yLWMwNjMgNTMuMzUyNjI0LCAyMDA4LzA3LzMwLTE4OjEyOjE4ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIKICAgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iIgogICBwaG90b3Nob3A6QXV0aG9yc1Bvc2l0aW9uPSIiPgogICA8ZGM6cmlnaHRzPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6cmlnaHRzPgogICA8ZGM6Y3JlYXRvcj4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGk+QWxiZXJ0byBCaWdhdHRpPC9yZGY6bGk+CiAgICA8L3JkZjpTZXE+CiAgIDwvZGM6Y3JlYXRvcj4KICAgPGRjOnRpdGxlPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6dGl0bGU+CiAgIDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPgogICAgPC9yZGY6QWx0PgogICA8L3htcFJpZ2h0czpVc2FnZVRlcm1zPgogICA8SXB0YzR4bXBDb3JlOkNyZWF0b3JDb250YWN0SW5mbwogICAgSXB0YzR4bXBDb3JlOkNpQWRyRXh0YWRyPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDaXR5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJSZWdpb249IiIKICAgIElwdGM0eG1wQ29yZTpDaUFkclBjb2RlPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDdHJ5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lUZWxXb3JrPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lFbWFpbFdvcms9IiIKICAgIElwdGM0eG1wQ29yZTpDaVVybFdvcms9IiIvPgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+RO84nQAAAwBQTFRFamts+fn5mp6hc3Nz9fX1U1NTS0tKnaGk6unqzM3P7e3u8fHxuLm7/Pz8lZmc2dnZxcXGWlpavr29wsLCp6eniYmKhYaGZWZmkpaZ0dHS5eXlkZGSrq2utbW2XV1d4uHhfX1+sbGy1dXW3d3dqampgYGCjY2OyMnKYWJi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','S','S'),(3,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>       @qr_code@      </td>      <td>       <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">A autenticidade deste documento pode ser conferida no site <a title=\"Página de Autenticidade de Documentos\" href=\"http://[servidor_php]/sei/controlador_externo.php?acao=documento_conferir&id_orgao_acesso_externo=0\" target=\"_blank\">http://[servidor_php]/sei/controlador_externo.php?acao=documento_conferir&id_orgao_acesso_externo=0</a>, informando o código verificador <b>@codigo_verificador@</b> e o código CRC <b>@crc_assinatura@</b>.</p>      </td>    </tr>  </table>  <hr style=\"margin:1px;\" />  <br />',NULL,'S','V'),(4,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 3º, caput, da <a title=\"Acesse a Lei\" href=\"https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12682.htm\" target=\"_blank\">Lei nº 12.682, de 9 de julho de 2012</a>, a partir de @tipo_conferencia@.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p></td></tr></table>','iVBORw0KGgoAAAANSUhEUgAAAFkAAAA8CAMAAAA67OZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADTtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDQuMi4yLWMwNjMgNTMuMzUyNjI0LCAyMDA4LzA3LzMwLTE4OjEyOjE4ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIKICAgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iIgogICBwaG90b3Nob3A6QXV0aG9yc1Bvc2l0aW9uPSIiPgogICA8ZGM6cmlnaHRzPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6cmlnaHRzPgogICA8ZGM6Y3JlYXRvcj4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGk+QWxiZXJ0byBCaWdhdHRpPC9yZGY6bGk+CiAgICA8L3JkZjpTZXE+CiAgIDwvZGM6Y3JlYXRvcj4KICAgPGRjOnRpdGxlPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6dGl0bGU+CiAgIDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPgogICAgPC9yZGY6QWx0PgogICA8L3htcFJpZ2h0czpVc2FnZVRlcm1zPgogICA8SXB0YzR4bXBDb3JlOkNyZWF0b3JDb250YWN0SW5mbwogICAgSXB0YzR4bXBDb3JlOkNpQWRyRXh0YWRyPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDaXR5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJSZWdpb249IiIKICAgIElwdGM0eG1wQ29yZTpDaUFkclBjb2RlPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDdHJ5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lUZWxXb3JrPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lFbWFpbFdvcms9IiIKICAgIElwdGM0eG1wQ29yZTpDaVVybFdvcms9IiIvPgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+RO84nQAAAwBQTFRFamts+fn5mp6hc3Nz9fX1U1NTS0tKnaGk6unqzM3P7e3u8fHxuLm7/Pz8lZmc2dnZxcXGWlpavr29wsLCp6eniYmKhYaGZWZmkpaZ0dHS5eXlkZGSrq2utbW2XV1d4uHhfX1+sbGy1dXW3d3dqampgYGCjY2OyMnKYWJi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','S','A'),(5,'<hr style=\"margin: 0 0 4px 0;\" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style=\"margin:0;text-align: left; font-size:11pt;font-family: Calibri;\">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title=\"Acesse o Decreto\" href=\"http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm\" target=\"_blank\">Decreto nº 8.539, de 8 de outubro de 2015</a>, a partir de @tipo_conferencia@.</p></td></tr></table>','iVBORw0KGgoAAAANSUhEUgAAAFkAAAA8CAMAAAA67OZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADTtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDQuMi4yLWMwNjMgNTMuMzUyNjI0LCAyMDA4LzA3LzMwLTE4OjEyOjE4ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIKICAgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iIgogICBwaG90b3Nob3A6QXV0aG9yc1Bvc2l0aW9uPSIiPgogICA8ZGM6cmlnaHRzPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6cmlnaHRzPgogICA8ZGM6Y3JlYXRvcj4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGk+QWxiZXJ0byBCaWdhdHRpPC9yZGY6bGk+CiAgICA8L3JkZjpTZXE+CiAgIDwvZGM6Y3JlYXRvcj4KICAgPGRjOnRpdGxlPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6dGl0bGU+CiAgIDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPgogICAgPC9yZGY6QWx0PgogICA8L3htcFJpZ2h0czpVc2FnZVRlcm1zPgogICA8SXB0YzR4bXBDb3JlOkNyZWF0b3JDb250YWN0SW5mbwogICAgSXB0YzR4bXBDb3JlOkNpQWRyRXh0YWRyPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDaXR5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJSZWdpb249IiIKICAgIElwdGM0eG1wQ29yZTpDaUFkclBjb2RlPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDdHJ5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lUZWxXb3JrPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lFbWFpbFdvcms9IiIKICAgIElwdGM0eG1wQ29yZTpDaVVybFdvcms9IiIvPgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+RO84nQAAAwBQTFRFamts+fn5mp6hc3Nz9fX1U1NTS0tKnaGk6unqzM3P7e3u8fHxuLm7/Pz8lZmc2dnZxcXGWlpavr29wsLCp6eniYmKhYaGZWZmkpaZ0dHS5eXlkZGSrq2utbW2XV1d4uHhfX1+sbGy1dXW3d3dqampgYGCjY2OyMnKYWJi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','S','H');
 /*!40000 ALTER TABLE `tarja_assinatura` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7654,4 +7743,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-10 17:49:04
+-- Dump completed on 2021-05-18  5:13:36
